@@ -15,6 +15,14 @@ ECS_OBJECTS = [
     task_family: "barstack",
     service: "barstack",
   },
+  {
+    task_family: "bloopist",
+    service: "bloopist",
+  },
+  {
+    task_family: "pricer-pro",
+    service: "pricer-pro",
+  },
 ].freeze
 
 # These probably won't change from project to project
