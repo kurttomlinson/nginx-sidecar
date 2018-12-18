@@ -78,10 +78,7 @@ def generate_task_definition(task_family)
     end
   end
 
-  begin
-    Dir.mkdir(TASK_DEFINITION_PATH)
-  rescue Errno::EEXIST
-  end
+  Dir.mkdir(TASK_DEFINITION_PATH) unless Dir.exist? TASK_DEFINITION_PATH
 
   task_definition_filename = "#{TASK_DEFINITION_PATH}#{task_family}:#{task_definition_revision}.json"
   File.open(task_definition_filename, 'w') { |f| f.write(task_definition.to_json) }
