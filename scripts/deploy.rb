@@ -76,6 +76,7 @@ def generate_task_definition(task_family)
     if container_definition["image"] =~ /#{REPOSITORY_ADDRESS}#{REPOSITORY_NAME}:/
       container_definition["image"] = "#{REPOSITORY_ADDRESS}#{REPOSITORY_NAME}:#{TAG}"
     end
+    container_definition.delete "logConfiguration" if DELETE_LOG_CONFIGURATION
   end
 
   Dir.mkdir(TASK_DEFINITION_PATH) unless Dir.exist? TASK_DEFINITION_PATH
