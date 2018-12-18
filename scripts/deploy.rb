@@ -10,6 +10,7 @@ require 'open3'
 
 # These should change from project to project
 REPOSITORY_NAME = "nginx-sidecar".freeze
+DELETE_LOG_CONFIGURATION = true
 ECS_OBJECTS = [
   {
     task_family: "barstack",
