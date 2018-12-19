@@ -9,8 +9,8 @@ require 'json'
 require 'open3'
 
 # These should change from project to project
-REPOSITORY_NAME = "nginx-sidecar".freeze
 DELETE_LOG_CONFIGURATION = true
+REPOSITORY_NAME = "nginx-sidecar".freeze
 ECS_OBJECTS = [
   {
     task_family: "evalog",
